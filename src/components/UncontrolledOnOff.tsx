@@ -2,12 +2,12 @@ import React, {useState} from "react";
 
 
 type UncontrolledOnOffPropsType = {
-    //on: boolean
+    callBack:(on:boolean)=>void
 }
-export const UncontrolledOnOff = (props: OnOffPropsType) => {
+export const UncontrolledOnOff = (props:UncontrolledOnOffPropsType) => {
 
 
-   let [on,setOn]=useState(false)
+   let [on,setOn]=useState<boolean>(false)
 
 
 const onStyle={
@@ -19,7 +19,7 @@ const onStyle={
     backgroundColor:on?'green':"white"
 
 }
-const ofStyle={
+const offStyle={
     width: '45px',
     height: '25px',
     border:'1px solid black',
@@ -39,10 +39,20 @@ const indicatorStyle = {
     backgroundColor:on? 'green': 'red'
 
 }
+const onClicked =()=>{
+        setOn(true)
+        props.callBack(true)
+   }
+
+   const offClicked = ()=>{
+       setOn(false)
+       props.callBack(false)
+   }
+
 return (
         <div>
-            <div style={onStyle} onClick={()=>{setOn(true)}}>ON</div>
-            <div style={ofStyle} onClick={()=>{setOn(false)}}>OFF</div>
+            <div style={onStyle} onClick={onClicked}>ON</div>
+            <div style={offStyle} onClick={offClicked}>OFF</div>
             <div style={indicatorStyle}></div>
         </div>
     )

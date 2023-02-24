@@ -10,12 +10,6 @@ export const UncontrolledAccordion = (props: UncontrolledAccordionPropsType) => 
     let [collapsed,setCollapsed]=useState(false)
 
 
-    const collapsedMenu =()=>{
-
-            setCollapsed(!collapsed)
-
-    }
-
 
 
     return (

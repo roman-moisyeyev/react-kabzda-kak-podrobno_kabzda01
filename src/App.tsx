@@ -15,35 +15,46 @@ function App() {
     let[accordionCollapsed, setAccordionCollapsed]= useState<boolean>(true)
 
 
-    let [on,setOn]=useState(false)
+    let [swithOn,setSwitchOn]=useState<boolean>(false)
+
+    let [on,setOn]=useState<boolean>(false)
+
 
     return (
         <div className="App">
-            {/*<PageTitle titleValue={'this is app component'}/>*/}
-            {/*<PageTitle titleValue={'my friends'}/>*/}
+            <PageTitle titleValue={'this is app component'}/>
+            <PageTitle titleValue={'my friends'}/>
             {/*<Accordion titleValue={'MENU'} collapsed={true}/>*/}
             {/*<Accordion titleValue={'USERS'} collapsed={true}/>*/}
             <Accordion
                 titleValue={'Hobbies'}
                 collapsed={accordionCollapsed}
-                setAccordionCollapsed={setAccordionCollapsed}
+                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
+            />
+            <Accordion
+                titleValue={'menu'}
+                collapsed={accordionCollapsed}
+                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
             />
 
-            {/*<UncontrolledOnOff />*/}
-            {/*<UncontrolledOnOff />*/}
 
 
             <ControlledOnOff on={on} setOn={setOn}/>
+
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <ControlledOnOff on={on} setOn={setOn}/>
+
+           <ControlledOnOff on={on} setOn={setOn}/>
+
+            <UncontrolledOnOff callBack={setSwitchOn}  />
+           <div>{swithOn.toString()}</div>
 
 
 
-            {/*<UncontrolledAccordion titleValue={'What to drink'} />*/}
-            {/*<UncontrolledAccordion titleValue={'What to learn'} />*/}
+            <UncontrolledAccordion titleValue={'What to drink'} />
+            <UncontrolledAccordion titleValue={'What to learn'} />
 
-            {/*<UncontrolledRating />*/}
-            {/*<UncontrolledRating />*/}
+            <UncontrolledRating />
+            <UncontrolledRating />
 
 
         </div>
