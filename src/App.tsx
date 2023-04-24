@@ -6,6 +6,7 @@ import {UncontrolledOnOff} from "./components/UncontrolledOnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating";
 import {ControlledOnOff} from "./components/ControlledOnOff";
+import {Input} from "./components/Input";
 
 
 function App() {
@@ -22,41 +23,41 @@ function App() {
 
     return (
         <div className="App">
-            <PageTitle titleValue={'this is app component'}/>
-            <PageTitle titleValue={'my friends'}/>
-            {/*<Accordion titleValue={'MENU'} collapsed={true}/>*/}
-            {/*<Accordion titleValue={'USERS'} collapsed={true}/>*/}
-            <Accordion
-                titleValue={'Hobbies'}
-                collapsed={accordionCollapsed}
-                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
-            />
-            <Accordion
-                titleValue={'menu'}
-                collapsed={accordionCollapsed}
-                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
-            />
+           {/* <PageTitle titleValue={'this is app component'}/>*/}
+           {/* <PageTitle titleValue={'my friends'}/>*/}
+           {/* /!*<Accordion titleValue={'MENU'} collapsed={true}/>*!/*/}
+           {/* /!*<Accordion titleValue={'USERS'} collapsed={true}/>*!/*/}
+           {/* <Accordion*/}
+           {/*     titleValue={'Hobbies'}*/}
+           {/*     collapsed={accordionCollapsed}*/}
+           {/*     setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+           {/* />*/}
+           {/* <Accordion*/}
+           {/*     titleValue={'menu'}*/}
+           {/*     collapsed={accordionCollapsed}*/}
+           {/*     setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+           {/* />*/}
 
 
 
-            <ControlledOnOff on={on} setOn={setOn}/>
+           {/* <ControlledOnOff on={on} setOn={setOn}/>*/}
 
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+           {/* <Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
-           <ControlledOnOff on={on} setOn={setOn}/>
+           {/*<ControlledOnOff on={on} setOn={setOn}/>*/}
 
-            <UncontrolledOnOff callBack={setSwitchOn}  />
-           <div>{swithOn.toString()}</div>
-
-
-
-            <UncontrolledAccordion titleValue={'What to drink'} />
-            <UncontrolledAccordion titleValue={'What to learn'} />
-
-            <UncontrolledRating />
-            <UncontrolledRating />
+           {/* <UncontrolledOnOff callBack={setSwitchOn}  />*/}
+           {/*<div>{swithOn.toString()}</div>*/}
 
 
+
+           {/* <UncontrolledAccordion titleValue={'What to drink'} />*/}
+           {/* <UncontrolledAccordion titleValue={'What to learn'} />*/}
+
+           {/* <UncontrolledRating />*/}
+           {/* <UncontrolledRating />*/}
+
+<Input/>
         </div>
     );
 }
