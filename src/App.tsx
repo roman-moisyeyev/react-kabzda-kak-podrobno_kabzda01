@@ -27,11 +27,22 @@ function App() {
            {/* <PageTitle titleValue={'my friends'}/>*/}
            {/* /!*<Accordion titleValue={'MENU'} collapsed={true}/>*!/*/}
            {/* /!*<Accordion titleValue={'USERS'} collapsed={true}/>*!/*/}
-           {/* <Accordion*/}
-           {/*     titleValue={'Hobbies'}*/}
-           {/*     collapsed={accordionCollapsed}*/}
-           {/*     setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
-           {/* />*/}
+            <Accordion
+                titleValue={'USERS'}
+                collapsed={accordionCollapsed}
+                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
+             items={[
+                 {title:'Roman',value:1},
+                 {title:'Sergey',value:2},
+                 {title:'Andrey',value:3},
+                 {title:'John',value:4},
+                 {title:'Elle',value:5},
+                 {title:'Cristofer',value:6}
+             ]
+             } onClick={(id)=>{
+                console.log(`user with id=${id} was clicked`)}} />
+
+
            {/* <Accordion*/}
            {/*     titleValue={'menu'}*/}
            {/*     collapsed={accordionCollapsed}*/}
@@ -57,7 +68,7 @@ function App() {
            {/* <UncontrolledRating />*/}
            {/* <UncontrolledRating />*/}
 
-<Input/>
+{/*<Input/>*/}
         </div>
     );
 }
