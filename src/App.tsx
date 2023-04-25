@@ -8,6 +8,7 @@ import {UncontrolledRating} from "./components/UncontrolledRating";
 import {ControlledOnOff} from "./components/ControlledOnOff";
 import {Input} from "./components/Input";
 import {CustomSelect} from "./components/CustomSelect";
+import {ReactMemoDemo} from "./components/ReactMemoDemo";
 
 
 function App() {
@@ -72,27 +73,28 @@ function App() {
 
 
 
-            <UncontrolledAccordion titleValue={'What to drink'} />
+            {/*<UncontrolledAccordion titleValue={'What to drink'} />*/}
            {/* <UncontrolledAccordion titleValue={'What to learn'} />*/}
 
            {/* <UncontrolledRating />*/}
            {/* <UncontrolledRating />*/}
 
 {/*<Input/>*/}
+            <ReactMemoDemo/>
+
         </div>
     );
 }
 
 
-type PageTitlePropsType = {
-    titleValue: string
-
-}
-export const PageTitle = (props: PageTitlePropsType) => {
-    return (
-        <h2>{props.titleValue}</h2>
-    )
-}
-
+// type PageTitlePropsType = {
+//     titleValue: string
+//
+// }
+// export const PageTitle = (props: PageTitlePropsType) => {
+//     return (
+//         <h2>{props.titleValue}</h2>
+//     )
+// }
 
 export default App;
