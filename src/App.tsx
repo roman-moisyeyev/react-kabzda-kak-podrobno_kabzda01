@@ -7,6 +7,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating";
 import {ControlledOnOff} from "./components/ControlledOnOff";
 import {Input} from "./components/Input";
+import {CustomSelect} from "./components/CustomSelect";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
     let [swithOn,setSwitchOn]=useState<boolean>(false)
 
     let [on,setOn]=useState<boolean>(false)
+
+    const [value,setValue]=useState('2')
 
 
     return (
@@ -41,6 +44,13 @@ function App() {
              ]
              } onClick={(id)=>{
                 console.log(`user with id=${id} was clicked`)}} />
+            <div>
+                ---------------------------------------------------
+            </div>
+
+            <CustomSelect items={[{title:'Kharkiv',value:'1'},{title:'Zhytomyr',value:'2'},{title:'Kyiv',value:'3'}]}
+                          onChange={setValue}
+                          value={value}/>
 
 
            {/* <Accordion*/}
