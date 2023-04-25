@@ -30,27 +30,27 @@ function App() {
            {/* <PageTitle titleValue={'my friends'}/>*/}
            {/* /!*<Accordion titleValue={'MENU'} collapsed={true}/>*!/*/}
            {/* /!*<Accordion titleValue={'USERS'} collapsed={true}/>*!/*/}
-            <Accordion
-                titleValue={'USERS'}
-                collapsed={accordionCollapsed}
-                setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}
-             items={[
-                 {title:'Roman',value:1},
-                 {title:'Sergey',value:2},
-                 {title:'Andrey',value:3},
-                 {title:'John',value:4},
-                 {title:'Elle',value:5},
-                 {title:'Cristofer',value:6}
-             ]
-             } onClick={(id)=>{
-                console.log(`user with id=${id} was clicked`)}} />
-            <div>
-                ---------------------------------------------------
-            </div>
+           {/* <Accordion*/}
+           {/*     titleValue={'USERS'}*/}
+           {/*     collapsed={accordionCollapsed}*/}
+           {/*     setAccordionCollapsed={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+           {/*  items={[*/}
+           {/*      {title:'Roman',value:1},*/}
+           {/*      {title:'Sergey',value:2},*/}
+           {/*      {title:'Andrey',value:3},*/}
+           {/*      {title:'John',value:4},*/}
+           {/*      {title:'Elle',value:5},*/}
+           {/*      {title:'Cristofer',value:6}*/}
+           {/*  ]*/}
+           {/*  } onClick={(id)=>{*/}
+           {/*     console.log(`user with id=${id} was clicked`)}} />*/}
+           {/* <div>*/}
+           {/*     ---------------------------------------------------*/}
+           {/* </div>*/}
 
-            <CustomSelect items={[{title:'Kharkiv',value:'1'},{title:'Zhytomyr',value:'2'},{title:'Kyiv',value:'3'}]}
-                          onChange={setValue}
-                          value={value}/>
+            {/*<CustomSelect items={[{title:'Kharkiv',value:'1'},{title:'Zhytomyr',value:'2'},{title:'Kyiv',value:'3'}]}*/}
+            {/*              onChange={setValue}*/}
+            {/*              value={value}/>*/}
 
 
            {/* <Accordion*/}
@@ -72,7 +72,7 @@ function App() {
 
 
 
-           {/* <UncontrolledAccordion titleValue={'What to drink'} />*/}
+            <UncontrolledAccordion titleValue={'What to drink'} />
            {/* <UncontrolledAccordion titleValue={'What to learn'} />*/}
 
            {/* <UncontrolledRating />*/}
