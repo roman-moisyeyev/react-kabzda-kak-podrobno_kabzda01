@@ -9,6 +9,7 @@ import {ControlledOnOff} from "./components/ControlledOnOff";
 import {Input} from "./components/Input";
 import {CustomSelect} from "./components/CustomSelect";
 import {ReactMemoDemo} from "./components/ReactMemoDemo";
+import {LikeUseCallback} from "./components/LikeUseCallback";
 
 
 function App() {
@@ -80,7 +81,8 @@ function App() {
            {/* <UncontrolledRating />*/}
 
 {/*<Input/>*/}
-            <ReactMemoDemo/>
+{/*            <ReactMemoDemo/>*/}
+            <LikeUseCallback/>
 
         </div>
     );
