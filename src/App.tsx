@@ -10,6 +10,8 @@ import {Input} from "./components/Input";
 import {CustomSelect} from "./components/CustomSelect";
 import {ReactMemoDemo} from "./components/ReactMemoDemo";
 import {LikeUseCallback} from "./components/LikeUseCallback";
+import {UseMemo} from "./components/UseMemo";
+import UseMemoWihReactMemo, {HelpsToReactMemo} from "./components/UseMemoWihReactMemo";
 
 
 function App() {
@@ -82,7 +84,9 @@ function App() {
 
 {/*<Input/>*/}
 {/*            <ReactMemoDemo/>*/}
-            <LikeUseCallback/>
+{/*            <LikeUseCallback/>*/}
+{/*            <UseMemo/>*/}
+            <HelpsToReactMemo/>
 
         </div>
     );
